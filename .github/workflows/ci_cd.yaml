@@ -82,4 +82,4 @@ jobs:
       - name: Update deployment image
         run: |
           kubectl set image deployment/${{ vars.DEPLOYMENT_NAME }} \
-            ${{ vars.CONTAINER_NAME }}=${{ secrets.DOCKER_USERNAME }}/${{ vars.DOCKER_IMAGE_NAME }}:${{ github.sha }}
+            ${{ vars.CONTAINER_NAME }}=${{ secrets.DOCKER_USERNAME }}/${{ vars.DOCKER_IMAGE_NAME }}:${{ github.sha }} 
